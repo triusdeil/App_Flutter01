@@ -27,21 +27,29 @@ class MyApp extends StatelessWidget {
 class  HomePage extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
-      return Column(
+      return  Column(
         children:<Widget>[
-          dayWidget("lunes",Icons.wb_cloudy,"45 °C")
+          dayWidget("Lunes",Icons.wb_cloudy,"45 °C"),
+          dayWidget("Martes",Icons.wb_sunny,"40 °C"),
+          dayWidget("Miercoles",Icons.wb_cloudy,"35 °C"),
+          dayWidget("Jueves",Icons.wb_sunny,"45 °C"),
+          dayWidget("Viernes",Icons.wb_cloudy,"40 °C")
         ]
       );
     }
     Widget dayWidget(String day, IconData iconData, String temp){
-      return Card(child:
-      Row(children: 
-          <Widget>[
+      return Card(
+        child: Padding( 
+          padding: const EdgeInsets.all(24.0),
+         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children:<Widget>[
             Text(day),
             Icon(iconData),
             Text(temp),
            ],
          )
+      )
       );
     }
   }
