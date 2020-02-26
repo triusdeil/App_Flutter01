@@ -61,7 +61,7 @@ class  HomePage extends StatelessWidget {
       Positioned(
         right: 8.0,
         bottom: 8.0,
-        child: Text("32C", style: TextStyle(
+        child: Text("32°C", style: TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold)),
       ),
